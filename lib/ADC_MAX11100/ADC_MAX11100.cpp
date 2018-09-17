@@ -1,4 +1,11 @@
-
+/* 
+	MAX11100.h - Library for 16-Bit, +5V, 200ksps ADC with 10µA Shutdown
+	
+	version 0.1 (Sep 17, 2018) - Kick off.
+	Created by Bohan Zheng, Sep 17, 2018.
+	Copyright (c) 2018 Bohan Zheng(codemonkeyboris) under The MIT License (MIT)
+	for other librarys and sketches look at https://github.com/codemonkeyboris
+*/
 
 #include <SPI.h>
 #include <ADC_MAX11100.h>
@@ -14,7 +21,7 @@ ADC_MAX11100::ADC_MAX11100(int CS)
 }
 
 
-int ADC_MAX11100::readAdc() 
+uint16_t ADC_MAX11100::readAdc() 
 {
 	/* 16MHz => 4MHz
 	 * the max is 4.8MHz, 24 clock cycles for one reading 
